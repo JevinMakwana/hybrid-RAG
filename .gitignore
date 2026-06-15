@@ -4,3 +4,5 @@ hybrid-rag-v1/
 LLM-demo.ipynb
 
 **/temp*
+
+**/*.egg-info

@@ -1,10 +1,12 @@
+import os
 # proj-grag\GRAG_V4\services\ingestion\build_graph_from_pdf.py
 
 from services.ingestion.pdf_parser import extract_pages
 from services.ingestion.block_extractor import extract_blocks
 from services.graph.graph_builder import insert_graph, close
 
-PDF_PATH = r"C:\Users\Dell\Downloads\Internship Preparation Roadmap for CDS.pdf"
+# PDF_PATH = r"C:\Users\Dell\Downloads\Internship Preparation Roadmap for CDS.pdf"
+PDF_PATH = r"C:\Users\Dell\OneDrive - Indian Institute of Science\Academics\LAB\ArjunanSir-CPSdep\Federated Foundation Models on Heterogeneous Time Series (FFTS).pdf"
 DOC_ID = "DOC_001"
 
 
