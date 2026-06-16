@@ -1,4 +1,4 @@
-# proj-grag\GRAG_V4\services\embedding\embeddings.py
+# hybrid_RAG\services\embedding\embeddings.py
 import requests
 import os
 from dotenv import load_dotenv

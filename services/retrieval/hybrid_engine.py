@@ -1,4 +1,4 @@
-# proj-grag\GRAG_V4\services\retrieval\hybrid_engine.py
+# hybrid_RAG\services\retrieval\hybrid_engine.py
 from services.retrieval.vector_retriever import VectorRetriever
 from services.retrieval.graph_retriever import GraphRetriever
 from services.retrieval.query_processor import process_query

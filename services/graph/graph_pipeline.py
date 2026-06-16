@@ -1,4 +1,4 @@
-# proj-grag\GRAG_V4\services\graph\graph_pipeline.py
+# hybrid_RAG\services\graph\graph_pipeline.py
 import uuid
 
 from services.graph.entity_extractor import extract_entities

@@ -1,4 +1,4 @@
-# proj-grag\GRAG_V4\services\retrieval\vector_retriever.py
+# hybrid_RAG\services\retrieval\vector_retriever.py
 from services.embedding.embeddings import get_embedding
 from services.vector_db.weaviate_client import WeaviateDB
 

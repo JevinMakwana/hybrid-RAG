@@ -1,5 +1,5 @@
 import os
-# proj-grag\GRAG_V4\services\ingestion\build_graph_from_pdf.py
+# hybrid_RAG\services\ingestion\build_graph_from_pdf.py
 
 from services.ingestion.pdf_parser import extract_pages
 from services.ingestion.block_extractor import extract_blocks

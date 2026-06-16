@@ -1,4 +1,4 @@
-# proj-grag\GRAG_V4\services\retrieval\query_processor.py
+# hybrid_RAG\services\retrieval\query_processor.py
 from services.graph.entity_extractor import extract_entities
 
 

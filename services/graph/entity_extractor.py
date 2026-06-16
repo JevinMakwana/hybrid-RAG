@@ -1,4 +1,4 @@
-# proj-grag\GRAG_V4\services\graph\entity_extractor.py
+# hybrid_RAG\services\graph\entity_extractor.py
 import json
 import re
 from services.llm.llm_client import call_llm

@@ -1,4 +1,4 @@
-# proj-grag\GRAG_V4\services\vector_db\weaviate_client.py
+# hybrid_RAG\services\vector_db\weaviate_client.py
 import weaviate
 from weaviate.classes.config import Configure, Property
 from weaviate.classes.data import DataObject

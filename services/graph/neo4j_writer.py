@@ -1,4 +1,4 @@
-# proj-grag\GRAG_V4\services\graph\neo4j_writer.py
+# hybrid_RAG\services\graph\neo4j_writer.py
 from neo4j import GraphDatabase
 import os
 from dotenv import load_dotenv

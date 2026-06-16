@@ -1,4 +1,4 @@
-# proj-grag\GRAG_V4\services\ingestion\chunker.py
+# hybrid_RAG\services\ingestion\chunker.py
 def _get_block_text(block):
     """
     Safely extract text from a block based on its type.
