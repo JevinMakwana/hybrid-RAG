@@ -6,7 +6,7 @@ from services.graph.relation_extractor import extract_relations
 from services.graph.neo4j_writer import Neo4jWriter
 
 
-def build_graph_from_chunks(chunk_texts):
+def     build_graph_from_chunks(chunk_texts, doc_id):
     writer = Neo4jWriter()
 
     for idx, text in enumerate(chunk_texts):
@@ -35,7 +35,8 @@ def build_graph_from_chunks(chunk_texts):
                 chunk_id=chunk_id,
                 text=text,
                 entities=entities,
-                relations=relations
+                relations=relations,    
+                doc_id=doc_id
             )
 
         except Exception as e:

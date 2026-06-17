@@ -105,9 +105,24 @@ def build_chunk_text(chunk):
     texts = []
 
     for b in chunk:
-        if b["type"] == "key_value":
-            texts.append(f"{b.get('key', '')}: {b.get('value', '')}")
+        btype = b.get("type")
+        
+        if btype == "key_value":
+            key = b.get("key", "").strip()
+            value = b.get("value", "").strip()
+            texts.append(f"{key}: {value}")
+            
+        elif btype == "paragraph":
+            # Extract standard narrative text content
+            content = b.get("content", "").strip()
+            if content:
+                texts.append(content)
+                
         else:
-            texts.append(b.get("content", ""))
+            # Robust fallback for numbered_clause, table_row, or raw text blocks
+            content = b.get("content") or b.get("text") or ""
+            content = content.strip()
+            if content:
+                texts.append(content)
 
-    return " ".join(texts).strip()
+    return "\n\n".join(texts)

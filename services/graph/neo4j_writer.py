@@ -19,27 +19,32 @@ class Neo4jWriter:
     def close(self):
         self.driver.close()
 
+
     def create_chunk_with_entities_and_relations(
         self,
         chunk_id,
         text,
         entities,
-        relations
+        relations,
+        doc_id 
     ):
         with self.driver.session() as session:
 
             # -----------------------------
-            # Chunk Node
+            # Chunk Node & Document Link
             # -----------------------------
             session.run(
                 """
+                MERGE (d:Document {id: $doc_id})
                 MERGE (c:Chunk {id: $id})
                 SET c.text = $text
+                MERGE (c)-[:BELONGS_TO]->(d)
                 """,
+                doc_id=doc_id, # NEW: Pass param
                 id=chunk_id,
                 text=text
             )
-
+            
             # -----------------------------
             # Entity Nodes + MENTIONS
             # -----------------------------

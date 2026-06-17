@@ -1,10 +1,9 @@
-# GRAG_V4\services\retrieval\graph_retriever.py
+# hybrid_RAG\services\retrieval\graph_retriever.py
 from neo4j import GraphDatabase
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
-
 
 class GraphRetriever:
     def __init__(self):
@@ -20,15 +19,14 @@ class GraphRetriever:
         self.driver.close()
 
     def get_related_chunks(self, entities):
-
         chunks = []
-
         with self.driver.session() as session:
             for ent in entities:
-
+                # FIX: Use toLower() in Cypher to match the lowercase query parameter
                 result = session.run(
                     """
-                    MATCH (e:Entity {name: $name})<-[:MENTIONS]-(c:Chunk)
+                    MATCH (e:Entity) WHERE toLower(e.name) = $name
+                    MATCH (e)<-[:MENTIONS]-(c:Chunk)
                     RETURN c.text AS text
                     LIMIT 5
                     """,
