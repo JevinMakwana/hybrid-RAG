@@ -1,0 +1,10 @@
+[
+  {
+    "question": "What percentage of Deep Learning preparation is recommended to be completed by the end of December?",
+    "ground_truth": "50-60% of Deep Learning preparation is recommended to be completed by the end of December."
+  },
+  {
+    "question": "What are the three key types of bias identified by the authors in the FeDaL paper?",
+    "ground_truth": "The three key types of bias identified are temporal resolution bias, physical constraint bias, and pattern transition bias."
+  }
+]
