@@ -10,7 +10,6 @@ from services.graph.relation_extractor import extract_relations
 
 URI = "bolt://localhost:7687"
 USERNAME = "neo4j"
-# PASSWORD = "projGragTVS"
 PASSWORD = "password123"
 
 driver = GraphDatabase.driver(URI, auth=(USERNAME, PASSWORD))
