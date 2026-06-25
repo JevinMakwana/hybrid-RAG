@@ -20,7 +20,9 @@ PDF_COLLECTION = {
 def run_pipeline():
     db = WeaviateDB()
     print("Initializing schema...")
-    db.create_schema(reset=True) # Resetting once to ensure a clean state
+    
+    # CRITICAL FIX: Change reset=True to reset=False for persistence
+    db.create_schema(reset=False) 
 
     for doc_id, pdf_path in PDF_COLLECTION.items():
         if not os.path.exists(pdf_path):
